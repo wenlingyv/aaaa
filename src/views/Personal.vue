@@ -2,27 +2,27 @@
   <div class="personal-page">
     <header class="personal-header">
       <div class="header-left">
-        <h1 class="page-title">个人中心</h1>
+        <h1 class="page-title">{{ t('personal.title') }}</h1>
       </div>
       <div class="header-right">
         <button class="header-btn theme-btn" @click="toggleTheme">
           <span class="btn-icon">{{ themeStore.isDark ? '☀️' : '🌙' }}</span>
-          <span>切换主题</span>
+          <span>{{ t('personal.theme') }}</span>
         </button>
-        <button class="header-btn lang-btn">
+        <button class="header-btn lang-btn" @click="toggleLanguage">
           <span class="btn-icon">🌐</span>
-          <span>中/EN</span>
+          <span>{{ t('personal.language') }}</span>
         </button>
         <button class="header-btn fullscreen-btn">
           <span class="btn-icon">⛶</span>
-          <span>全屏</span>
+          <span>{{ t('personal.fullscreen') }}</span>
         </button>
       </div>
     </header>
     <main class="personal-content">
       <div class="content-card">
-        <h2>欢迎来到个人中心</h2>
-        <p>这里是您的个人信息管理区域</p>
+        <h2>{{ t('personal.welcome') }}</h2>
+        <p>{{ t('personal.description') }}</p>
       </div>
     </main>
   </div>
@@ -31,10 +31,18 @@
 <script setup>
 import '../style/Personal.css'
 import { useThemeStore } from '../stores/theme'
+import { useI18n } from 'vue-i18n'
 
 const themeStore = useThemeStore()
+const { locale, t } = useI18n()
 
 const toggleTheme = () => {
   themeStore.toggleTheme()
+}
+
+const toggleLanguage = () => {
+  const newLocale = locale.value === 'zh' ? 'en' : 'zh'
+  locale.value = newLocale
+  localStorage.setItem('locale', newLocale)
 }
 </script>

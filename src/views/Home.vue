@@ -4,25 +4,25 @@
     <aside class="sidebar" :class="{ collapse: isCollapse }">
       <div class="logo">
         <div class="icon">🔥</div>
-        <span v-show="!isCollapse">系统</span>
+        <span v-show="!isCollapse">{{ t('sidebar.title') }}</span>
       </div>
 
       <div class="menu">
         <div class="item" @click="$router.push('/home')">
           <span>👤</span>
-          <span v-show="!isCollapse">个人中心</span>
+          <span v-show="!isCollapse">{{ t('sidebar.personal') }}</span>
         </div>
         <div class="item" @click="$router.push('/home/user')">
           <span>👥</span>
-          <span v-show="!isCollapse">员工管理</span>
+          <span v-show="!isCollapse">{{ t('sidebar.user') }}</span>
         </div>
         <div class="item" @click="$router.push('/home/role')">
           <span>📜</span>
-          <span v-show="!isCollapse">角色列表</span>
+          <span v-show="!isCollapse">{{ t('sidebar.role') }}</span>
         </div>
         <div class="item" @click="$router.push('/home/permission')">
           <span>🔐</span>
-          <span v-show="!isCollapse">权限列表</span>
+          <span v-show="!isCollapse">{{ t('sidebar.permission') }}</span>
         </div>
       </div>
 
@@ -45,7 +45,10 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
 const isCollapse = ref(false)
+const { t } = useI18n()
 </script>
 
 <style>
