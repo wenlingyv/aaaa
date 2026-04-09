@@ -1,35 +1,33 @@
 <template>
   <div class="personal-page">
-    <h2>个人中心</h2>
-    <button @click="toggleFullscreen" class="fullscreen-btn">
-      {{ isFullscreen ? '退出全屏' : '全屏模式' }}
-    </button>
+    <header class="personal-header">
+      <div class="header-left">
+        <h1 class="page-title">个人中心</h1>
+      </div>
+      <div class="header-right">
+        <button class="header-btn theme-btn">
+          <span class="btn-icon">🌙</span>
+          <span>切换主题</span>
+        </button>
+        <button class="header-btn lang-btn">
+          <span class="btn-icon">🌐</span>
+          <span>中/EN</span>
+        </button>
+        <button class="header-btn fullscreen-btn">
+          <span class="btn-icon">⛶</span>
+          <span>全屏</span>
+        </button>
+      </div>
+    </header>
+    <main class="personal-content">
+      <div class="content-card">
+        <h2>欢迎来到个人中心</h2>
+        <p>这里是您的个人信息管理区域</p>
+      </div>
+    </main>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
 import '../style/Personal.css'
-
-const isFullscreen = ref(false)
-
-const toggleFullscreen = () => {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen()
-  } else {
-    document.exitFullscreen()
-  }
-}
-
-const handleFullscreenChange = () => {
-  isFullscreen.value = !!document.fullscreenElement
-}
-
-onMounted(() => {
-  document.addEventListener('fullscreenchange', handleFullscreenChange)
-})
-
-onUnmounted(() => {
-  document.removeEventListener('fullscreenchange', handleFullscreenChange)
-})
 </script>
