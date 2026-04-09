@@ -24,6 +24,14 @@
           <span>🔐</span>
           <span v-show="!isCollapse">{{ t('sidebar.permission') }}</span>
         </div>
+        <div class="item" @click="$router.push('/home/article')">
+          <span>🔐</span>
+          <span v-show="!isCollapse">{{ t('sidebar.article') }}</span>
+        </div>
+        <div class="item" @click="$router.push('/home/create-article')">
+          <span>🔐</span>
+          <span v-show="!isCollapse">{{ t('sidebar.createArticle') }}</span>
+        </div>
       </div>
 
       <div class="toggle" @click="isCollapse = !isCollapse">

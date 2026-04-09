@@ -5,6 +5,8 @@ import Personal from '../views/Personal.vue'
 import User from '../views/User.vue'
 import Role from '../views/Role.vue'
 import Permission from '../views/Permission.vue'
+import Article from '../views/Article.vue'
+import CreateArticle from '../views/CreateArticle.vue'
 
 const routes = [
   { path: '/', component: Login },
@@ -16,6 +18,8 @@ const routes = [
       { path: 'user', component: User },
       { path: 'role', component: Role },
       { path: 'permission', component: Permission },
+      { path: 'article', component: Article },
+      { path: 'create-article', component: CreateArticle },
     ]
   }
 ]

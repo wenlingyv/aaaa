@@ -12,6 +12,8 @@ export default {
     personal: 'Personal Center',
     user: 'Employee Management',
     role: 'Role List',
-    permission: 'Permission List'
+    permission: 'Permission List',
+    article: 'Article List',
+    createArticle: 'Create Article'
   }
 }
