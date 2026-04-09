@@ -1,0 +1,17 @@
+.personal-page {
+  font-size: 22px;
+  padding: 20px;
+}
+.personal-page .fullscreen-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #409eff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.personal-page .fullscreen-btn:hover {
+  background-color: #66b1ff;
+}
