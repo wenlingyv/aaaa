@@ -5,8 +5,8 @@
         <h1 class="page-title">个人中心</h1>
       </div>
       <div class="header-right">
-        <button class="header-btn theme-btn">
-          <span class="btn-icon">🌙</span>
+        <button class="header-btn theme-btn" @click="toggleTheme">
+          <span class="btn-icon">{{ themeStore.isDark ? '☀️' : '🌙' }}</span>
           <span>切换主题</span>
         </button>
         <button class="header-btn lang-btn">
@@ -30,4 +30,11 @@
 
 <script setup>
 import '../style/Personal.css'
+import { useThemeStore } from '../stores/theme'
+
+const themeStore = useThemeStore()
+
+const toggleTheme = () => {
+  themeStore.toggleTheme()
+}
 </script>
