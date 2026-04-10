@@ -5,7 +5,8 @@ export default {
     description: 'This is your personal information management area',
     theme: 'Switch Theme',
     language: 'Chinese/English',
-    fullscreen: 'Full Screen'
+    fullscreen: 'Full Screen',
+    exitFullscreen: 'Exit Full Screen'
   },
   sidebar: {
     title: 'System',

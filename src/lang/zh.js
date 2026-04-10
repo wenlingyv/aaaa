@@ -5,7 +5,8 @@ export default {
     description: '这里是您的个人信息管理区域',
     theme: '切换主题',
     language: '中/EN',
-    fullscreen: '全屏'
+    fullscreen: '全屏',
+    exitFullscreen: '退出全屏'
   },
   sidebar: {
     title: '系统',
