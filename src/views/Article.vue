@@ -96,46 +96,6 @@ onMounted(() => {
     initSortable();
   });
 });
-// loadArticles()
-
-// 初始化拖拽排序
-// const initSortable = () => {
-//   const tableBody = document.querySelector('.el-table__body-wrapper tbody');
-//   if (tableBody) {
-//     //1、要拖拽的元素
-//     //2、配置对象
-//     Sortable.create(tableBody, {
-//       animation: 150,
-//       handle: '.el-table__row',
-//       ghostClass: 'sortable-ghost',
-//       onEnd: (evt) => {
-//         // 处理拖拽结束事件
-//         const { oldIndex, newIndex } = evt;
-        
-//         console.log(oldIndex, newIndex);
-//         if (oldIndex !== newIndex) {
-//           // 重新排序数组
-//           const movedItem = articles.value.splice(oldIndex, 1)[0];
-//           console.log(movedItem);
-//           articles.value.splice(newIndex, 0, movedItem);
-          
-//           // 更新排名
-//           articles.value.forEach((article, index) => {
-        
-//             article.rank = index +1;
-    
-//           });
-//           // articles.value=[]
-          
-//           // 重新加载文章列表
-//           loadArticles();
-          
-//           ElMessage.success('排序成功');
-//         }
-//       }
-//     });
-//   }
-// };
 
 const initSortable = () => {
   const tableBody = document.querySelector('.el-table__body-wrapper tbody');
