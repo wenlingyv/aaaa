@@ -1,0 +1,57 @@
+.excel-upload-area {
+  border: 2px dashed #d9d9d9;
+  border-radius: 6px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.excel-upload-area:hover {
+  border-color: #409eff;
+}
+
+.excel-upload-area.drag-active {
+  border-color: #409eff;
+  background-color: rgba(64, 158, 255, 0.05);
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.upload-icon {
+  font-size: 48px;
+  color: #409eff;
+}
+
+.upload-text {
+  font-size: 16px;
+  color: #606266;
+}
+
+.upload-hint {
+  font-size: 14px;
+  color: #909399;
+  margin-top: 8px;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #409eff;
+  margin-top: 8px;
+  word-break: break-all;
+}
+
+.excel-upload {
+  width: 100%;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
