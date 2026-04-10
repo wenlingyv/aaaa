@@ -7,7 +7,7 @@ import Role from '../views/Role.vue'
 import Permission from '../views/Permission.vue'
 import Article from '../views/Article.vue'
 import CreateArticle from '../views/CreateArticle.vue'
-
+import Shuju from '../views/shuju.vue'
 const routes = [
   { path: '/', component: Login },
   {
@@ -20,6 +20,7 @@ const routes = [
       { path: 'permission', component: Permission },
       { path: 'article', component: Article },
       { path: 'create-article', component: CreateArticle },
+      { path: 'shuju', component: Shuju },
     ]
   }
 ]

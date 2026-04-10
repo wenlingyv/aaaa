@@ -14,6 +14,7 @@ export default {
     role: '角色列表',
     permission: '权限列表',
     article: '文章列表',
-    createArticle: '创建文章'
+    createArticle: '创建文章',
+    shuju: '数据可视化'
   }
 }

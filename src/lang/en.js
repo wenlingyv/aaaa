@@ -14,6 +14,7 @@ export default {
     role: 'Role List',
     permission: 'Permission List',
     article: 'Article List',
-    createArticle: 'Create Article'
+    createArticle: 'Create Article',
+    shuju: 'Data Visualization'
   }
 }

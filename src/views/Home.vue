@@ -32,6 +32,10 @@
           <span>🔐</span>
           <span v-show="!isCollapse">{{ t('sidebar.createArticle') }}</span>
         </div>
+        <div class="item" @click="$router.push('/home/shuju')">
+          <span>🔐</span>
+          <span v-show="!isCollapse">{{ t('sidebar.shuju') }}</span>
+        </div>
       </div>
 
       <div class="toggle" @click="isCollapse = !isCollapse">
